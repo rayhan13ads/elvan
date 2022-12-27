@@ -1,0 +1,1 @@
+const String LOGO_SVG = 'assets/svgs/logo.svg';
