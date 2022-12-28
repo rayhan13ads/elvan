@@ -18,7 +18,7 @@ class RecentlyWidget extends StatelessWidget {
             children: [
               Text(
                 recently,
-                style: Theme.of(context).textTheme.headlineSmall,
+                style: Theme.of(context).textTheme.titleMedium,
               ),
               Spacer(),
               TextButton(

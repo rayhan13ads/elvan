@@ -33,7 +33,7 @@ class CategroiesWidget extends StatelessWidget {
 
           SizedBox(
             width: width(context),
-            height: 123,
+            height: 110,
             child: ListView.builder(
               itemCount: 6,
               shrinkWrap: true,

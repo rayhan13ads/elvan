@@ -22,9 +22,10 @@ class _CategoryItemState extends State<CategoryItem> {
       },
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 5),
-        height: 123,
-        width: 102,
+        height: 110,
+        width: 90,
         child: Card(
+          
           color: selected == widget.index ? primaryColor : cardBgDarkColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12.0),
@@ -36,8 +37,8 @@ class _CategoryItemState extends State<CategoryItem> {
             children: [
               Image.asset(
                 'assets/images/piceOfPiza.png',
-                width: 58,
-                height: 58,
+                width: 50,
+                height: 50,
               ),
               Text(
                 'Pizza',

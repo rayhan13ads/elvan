@@ -7,6 +7,7 @@ import 'package:elvan/screens/home/widgets/background_widget.dart';
 import 'package:elvan/screens/home/widgets/categories/categories_widget.dart';
 import 'package:elvan/screens/home/widgets/home_appbar.dart';
 import 'package:elvan/screens/home/widgets/recently_ordered/recently_widget.dart';
+import 'package:elvan/screens/home/widgets/top_picks/top_picks_widget.dart';
 import 'package:elvan/utils/sizer_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -37,15 +38,22 @@ class _HomeContentState extends State<HomeContent> {
             top: toolBarHeight(context) + 10,
             right: 0,
             left: 0,
-            child: Column(
-              children: [
-                CategroiesWidget(),
-                SingleChildScrollView(
-                  child: Column(
-                    children: [RecentlyWidget()],
-                  ),
-                )
-              ],
+            child: Container(
+              width: width(context),
+              height: height(context),
+              child: Column(
+                children: [
+                  CategroiesWidget(),
+                  Expanded(
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.vertical,
+                      child: Column(
+                        children: [RecentlyWidget(),TopPicksWidget(),SizedBox(height: 200,)],
+                      ),
+                    ),
+                  )
+                ],
+              ),
             ))
       ],
     );
