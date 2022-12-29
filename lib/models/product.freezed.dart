@@ -9,7 +9,6 @@ part of 'product.dart';
 // FreezedGenerator
 // **************************************************************************
 
-
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
@@ -21,11 +20,11 @@ Product _$ProductFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Product {
-  String get id => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   String get sub_title => throw _privateConstructorUsedError;
   int get price => throw _privateConstructorUsedError;
-  int get catgory_id => throw _privateConstructorUsedError;
+  String get catgory_id => throw _privateConstructorUsedError;
   String get image => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -39,11 +38,11 @@ abstract class $ProductCopyWith<$Res> {
       _$ProductCopyWithImpl<$Res, Product>;
   @useResult
   $Res call(
-      {String id,
+      {int id,
       String title,
       String sub_title,
       int price,
-      int catgory_id,
+      String catgory_id,
       String image});
 }
 
@@ -71,7 +70,7 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -87,7 +86,7 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
       catgory_id: null == catgory_id
           ? _value.catgory_id
           : catgory_id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       image: null == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
@@ -104,11 +103,11 @@ abstract class _$$_ProductCopyWith<$Res> implements $ProductCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {String id,
+      {int id,
       String title,
       String sub_title,
       int price,
-      int catgory_id,
+      String catgory_id,
       String image});
 }
 
@@ -133,7 +132,7 @@ class __$$_ProductCopyWithImpl<$Res>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -149,7 +148,7 @@ class __$$_ProductCopyWithImpl<$Res>
       catgory_id: null == catgory_id
           ? _value.catgory_id
           : catgory_id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       image: null == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
@@ -173,7 +172,7 @@ class _$_Product with DiagnosticableTreeMixin implements _Product {
       _$$_ProductFromJson(json);
 
   @override
-  final String id;
+  final int id;
   @override
   final String title;
   @override
@@ -181,7 +180,7 @@ class _$_Product with DiagnosticableTreeMixin implements _Product {
   @override
   final int price;
   @override
-  final int catgory_id;
+  final String catgory_id;
   @override
   final String image;
 
@@ -239,17 +238,17 @@ class _$_Product with DiagnosticableTreeMixin implements _Product {
 
 abstract class _Product implements Product {
   const factory _Product(
-      {required final String id,
+      {required final int id,
       required final String title,
       required final String sub_title,
       required final int price,
-      required final int catgory_id,
+      required final String catgory_id,
       required final String image}) = _$_Product;
 
   factory _Product.fromJson(Map<String, dynamic> json) = _$_Product.fromJson;
 
   @override
-  String get id;
+  int get id;
   @override
   String get title;
   @override
@@ -257,7 +256,7 @@ abstract class _Product implements Product {
   @override
   int get price;
   @override
-  int get catgory_id;
+  String get catgory_id;
   @override
   String get image;
   @override

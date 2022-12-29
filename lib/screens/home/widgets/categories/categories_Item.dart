@@ -1,32 +1,31 @@
 import 'package:elvan/constants/app_theme.dart';
+import 'package:elvan/models/category.dart';
 import 'package:flutter/material.dart';
 
-class CategoryItem extends StatefulWidget {
-  final int index;
-  CategoryItem({Key? key, required this.index}) : super(key: key);
+class CategoryItem extends StatelessWidget {
+  final Category category;
+  
+  final Color cardColor;
+  final void Function() onClick;
 
-  @override
-  State<CategoryItem> createState() => _CategoryItemState();
-}
-
-class _CategoryItemState extends State<CategoryItem> {
-  int selected = 0;
+  CategoryItem(
+      {Key? key,
+      required this.category,
+      required this.onClick,
+      this.cardColor = cardBgDarkColor,
+    })
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
-        setState(() {
-          selected = widget.index;
-        });
-      },
+      onTap: onClick,
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 5),
         height: 110,
         width: 90,
         child: Card(
-          
-          color: selected == widget.index ? primaryColor : cardBgDarkColor,
+          color: cardColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12.0),
           ),
@@ -35,13 +34,13 @@ class _CategoryItemState extends State<CategoryItem> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset(
-                'assets/images/piceOfPiza.png',
+              Image.network(
+                category.image,
                 width: 50,
                 height: 50,
               ),
               Text(
-                'Pizza',
+                category.name,
                 style: Theme.of(context).textTheme.titleSmall,
               )
             ],
